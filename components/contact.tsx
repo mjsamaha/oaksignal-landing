@@ -44,11 +44,11 @@ export default function Contact() {
                         transition={{ delay: 0.3 }}
                         className="mt-10 flex flex-col items-center justify-center gap-6"
                     >
-                        <a href="mailto:matthewsamaha@gmail.com" className="w-full sm:w-auto">
+                        <a href="mailto:contact.oaksignal@gmail.com" className="w-full sm:w-auto">
                             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                 <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-500 text-white gap-2 shadow-lg hover:shadow-blue-500/40 transition-all">
                                     <Mail className="h-4 w-4" />
-                                    matthewsamaha@gmail.com
+                                    contact.oaksignal@gmail.com
                                 </Button>
                             </motion.div>
                         </a>

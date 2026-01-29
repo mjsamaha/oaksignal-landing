@@ -23,6 +23,27 @@ export interface Project {
     };
     features: string[];
     detailedOverview: string;
+    technicalDetails?: {
+        frontend: string;
+        backend: string;
+        database: string;
+        auth: string;
+        storage: string;
+        security: string;
+    };
+    timeline?: {
+        phase: string;
+        date: string;
+        details: string | string[];
+    }[];
+    roles?: {
+        role: string;
+        access: string;
+    }[];
+    multiTenantDetails?: {
+        headline: string;
+        structure: string[];
+    };
 }
 
 export const projects: Project[] = [
@@ -30,50 +51,82 @@ export const projects: Project[] = [
         id: 1,
         slug: "signalsmaster",
         title: "SignalsMaster",
-        description: "Standardized, mobile-first quiz platform for cadet signal flag and pennant training.",
-        executiveSummary: "A standardized, mobile-first quiz platform designed to modernize and unify cadet signal flag and pennant training across units.",
+        description: "Multi-tenant learning management platform for sea cadet units.",
+        executiveSummary: "A specialized learning management system purpose-built for sea cadets where each unit operates in its own isolated digital space with complete data separation. Think D2L/Canvas, but for maritime training.",
         status: "In Development",
         statusColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-500 ring-yellow-600/20",
-        tech: ["Mobile-First", "Assessment Platform", "Training Tool"],
+        tech: ["Next.js", "ShadCN/UI", "PostgreSQL", "Multi-Tenant", "OAuth2"],
         href: "/projects/signalsmaster",
         repoUrl: "https://github.com/mjsamaha/signalsmaster",
-        problem: "Evaluation of cadet knowledge is often manual, inconsistent, and lacks progress tracking.",
+        problem: "Fragmented knowledge management and inconsistent training delivery across cadet units.",
         problemDomain: {
-            headline: "The Challenge: Inconsistent Training Standards",
+            headline: "The Challenge: Fragmented & Inconsistent Training",
             points: [
-                "No consistent way to assess cadet knowledge across different units.",
-                "Manual or informal evaluations lack standardization and fairness.",
-                "No centralized progress tracking or repeatable testing frameworks.",
-                "Difficulty measuring the actual effectiveness of training programs.",
+                "No centralized learning platform tailored to maritime cadet training.",
+                "Fragmented knowledge management across drives, emails, and paper.",
+                "Inconsistent training delivery across different units.",
+                "No way to track cadet progress or mastery of critical skills.",
+                "Limited engagement—training feels like homework rather than achievement.",
+                "Legacy Ionic app had limitations—need for modern stack for better UX and maintainability."
             ]
         },
-        outcome: "Structured assessments with instant feedback and measurable training progress across any device.",
+        outcome: "A modern, multi-tenant LMS providing isolated digital spaces for units with structured assessments and gamified learning.",
         solution: {
-            headline: "Our Solution: Standardized Digital Assessment",
+            headline: "Our Solution: Dedicated Multi-Tenant Platform",
             points: [
-                "Structured, standardized assessments that provide instant feedback to cadets.",
-                "A mobile-accessible platform allowing for learning and training anytime, anywhere.",
-                "Comprehensive progress tracking and performance analytics for instructors.",
-                "Measurable training progress consistent across all devices and units.",
+                "Modern Stack Migration: Re-building from Ionic to Next.js + ShadCN for better performance.",
+                "Multi-Tenant Architecture: Each unit sees only their cadets, quizzes, and leaderboards.",
+                "Specialized Learning Modules: Signal Flags, Points of Sail, Drill, Seamanship.",
+                "Gamified Assessments: Quizzes with instant feedback, achievements, and unit leaderboards.",
+                "Data Isolation & Security: Complete separation of unit data with row-level security.",
+                "Offline Capability: PWA with offline mode for field training scenarios."
             ]
         },
         features: [
-            "Interactive Flag Quizzes",
-            "Real-time Score Tracking",
-            "Mobile-Responsive Design",
-            "Admin Dashboard for Instructors"
+            "Multi-Tenant Architecture",
+            "Unit-Specific Leaderboards",
+            "Interactive Learning Modules",
+            "Real-time Progress Tracking",
+            "Role-Based Access Control",
+            "Offline PWA Support"
         ],
-        detailedOverview: "SignalsMaster addresses the need for a modern, accessible training tool for sea cadets. By digitizing the learning process for signal flags and pennants, it removes the variability of manual testing and provides a fun, engaging way for cadets to master essential skills. The platform is built with a focus on mobile usability, ensuring that training materials are available to cadets whenever they have a moment to spare.",
+        detailedOverview: "SignalsMaster is a specialized learning management system designed to modernize sea cadet training. Unlike generic LMS platforms, it is purpose-built for the maritime context, offering specific modules for Signal Flags, Seamanship, and Drill. The platform utilizes a multi-tenant architecture, ensuring that each cadet unit operates in a completely isolated environment—securely managing their own cadets, data, and progress tracking while benefiting from a shared, robust infrastructure. Starting with a pilot at Oakville Sea Cadets, it aims to scale to units nationwide.",
+        technicalDetails: {
+            frontend: "Next.js (React), TypeScript, ShadCN/UI, Tailwind CSS",
+            backend: "Node.js/Express or Next.js API routes",
+            database: "PostgreSQL with multi-tenant schema (unit_id scoping)",
+            auth: "Microsoft Azure AD OAuth2 + JWT tokens",
+            storage: "Cloud-based storage for learning materials (images, videos, PDFs)",
+            security: "Row-level security, email domain validation, encrypted traffic"
+        },
+        timeline: [
+            { phase: "Alpha Launch", date: "March 2026", details: "Pilot with Oakville Sea Cadets" },
+            { phase: "Beta Launch", date: "April 2026", details: "Expanded testing and feature refinement" },
+            { phase: "Expansion", date: "Q3 2026", details: "Rollout to future Sea Cadet units and potential Army/Air expansion" }
+        ],
+        roles: [
+            { role: "Junior Cadets", access: "Access learning materials, complete assessments, view own progress" },
+            { role: "Senior Cadets", access: "Mentor/tutor capabilities + Junior access" },
+            { role: "Officers/Instructors", access: "Full admin—create content, manage cadets, view analytics, configure unit settings" }
+        ],
+        multiTenantDetails: {
+            headline: "Isolated Digital Spaces",
+            structure: [
+                "Unit: Oakville Sea Cadets (Pilot) -> Cadets, Officers, Modules, Data",
+                "Unit: Future Units -> Same structure, completely isolated data",
+                "Platform Level -> Shared infrastructure, expansion ready"
+            ]
+        }
     },
     {
         id: 2,
         slug: "quartermaster",
         title: "Quartermaster",
-        description: "Enterprise-grade cadet inventory and supply management system with role-based access control.",
-        executiveSummary: "An enterprise-grade inventory and supply management system built to streamline logistics and accountability for cadet units, with role-based permissions for officers, senior cadets, and junior cadets.",
-        status: "In Development",
+        description: "Enterprise-grade cadet inventory and supply management system.",
+        executiveSummary: "An enterprise-grade inventory and supply management system built to streamline logistics and accountability for cadet units, featuring multi-tenant data isolation and role-based permissions.",
+        status: "Planning",
         statusColor: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 ring-blue-600/20",
-        tech: ["Inventory Management", "Audit System", "Operations Tool", "Role-Based Access"],
+        tech: ["Multi-Tenant", "Inventory Tracking", "Audit Logging", "Role-Based Access"],
         href: "/projects/quartermaster",
         repoUrl: "https://github.com/mjsamaha/quartermaster",
         problem: "Poor inventory visibility and reliance on paper tracking leads to lost equipment and lack of accountability.",
@@ -92,20 +145,80 @@ export const projects: Project[] = [
         solution: {
             headline: "Our Solution: Centralized Supply Chain Management",
             points: [
-                "A centralized inventory system providing real-time tracking of all assets.",
-                "Role-based access control: Officers (full admin), Senior Cadets (limited admin), Junior Cadets (view/request only).",
-                "Digital audit trails that ensure complete accountability for every item.",
-                "Comprehensive reporting and analytics to optimize supply levels.",
-                "Automated low-stock alerts and maintenance reminders.",
-                "Streamlined equipment check-in/check-out workflows to save time."
+                "Multi-Tenant Design: Each unit maintains separate inventory data, users, and workflows.",
+                "Real-Time Tracking: Centralized system showing current location and status of all assets.",
+                "Role-Based Access Control: Granular permissions for Officers, Senior Cadets, and Junior Cadets.",
+                "Digital Audit Trails: Complete accountability for every item movement.",
+                "Automated Alerts: Low-stock warnings, overdue returns, and maintenance reminders.",
+                "Check-In/Check-Out Workflows: Streamlined equipment sign-out with digital hand receipts."
             ]
         },
         features: [
             "Real-time Inventory Tracking",
             "Role-Based Access Control",
-            "Audit Trail & Accountability Logging",
-            "Equipment Check-In/Check-Out Workflows"
+            "Digital Audit Trails",
+            "Automated Low-Stock Alerts",
+            "Equipment Maintenance Scheduling",
+            "Digital Hand Receipts"
         ],
-        detailedOverview: "Quartermaster creates a digital backbone for cadet logistics. It replaces outdated spreadsheets and paper logs with a robust, cloud-based system that ensures every piece of kit is accounted for. The system features role-based access control, allowing officers and adult staff full administrative capabilities, senior cadets limited admin access for day-to-day operations, and junior cadets the ability to view inventory and submit requests. From uniforms to training equipment, Quartermaster provides the visibility, delegation, and control needed to run an efficient supply chain, allowing staff to focus more on training and less on counting stock.",
+        detailedOverview: "Quartermaster is an enterprise-grade inventory management system designed to solve the logistics challenges faced by cadet units. Currently in the planning and analysis phase, it aims to replace fragmented paper-based tracking with a robust, multi-tenant digital platform. By providing each unit with its own isolated data environment, Quartermaster ensures security and autonomy while offering powerful tools for tracking uniforms, equipment, and supplies. The system emphasizes accountability through digital audit trails and simplifies operations with role-based delegation, allowing senior cadets to assist with logistics under officer supervision.",
+        technicalDetails: {
+            frontend: "Next.js (React), TypeScript, ShadCN/UI",
+            backend: "Node.js/Express or Next.js API routes",
+            database: "PostgreSQL with multi-tenant schema",
+            auth: "Microsoft Azure AD OAuth2 + JWT tokens",
+            storage: "Cloud Storage for asset documentation",
+            security: "Row-level security, audit logging, role-based permissions"
+        },
+        timeline: [
+            {
+                phase: "Q1 2026: Planning & Analysis",
+                date: "Jan - Mar 2026",
+                details: [
+                    "Survey existing inventory practices at Oakville Sea Cadets",
+                    "Analyze pain points with current manual systems",
+                    "Evaluate technical approaches and architecture options",
+                    "Select best solution strategy (build vs. adapt)"
+                ]
+            },
+            {
+                phase: "Q2 2026: Design & Validation",
+                date: "Apr - Jun 2026",
+                details: [
+                    "Finalize requirements and technical architecture",
+                    "Approve database schema design",
+                    "Create and validate UI/UX mockups with stakeholders",
+                    "Establish development roadmap"
+                ]
+            },
+            {
+                phase: "Q3 2026: Pre-Development",
+                date: "Jul - Sep 2026",
+                details: [
+                    "Refine multi-tenant isolation strategy",
+                    "Validate cross-branch applicability (Sea vs. Army)",
+                    "Begin preliminary development (Auth, CRUD)",
+                    "Incorporate lessons from SignalsMaster release"
+                ]
+            },
+            {
+                phase: "Active Development",
+                date: "Q4 2026+",
+                details: "Target beta deployment to Oakville Sea Cadets"
+            }
+        ],
+        roles: [
+            { role: "Junior Cadets", access: "View-only access, ability to submit equipment requests" },
+            { role: "Senior Cadets", access: "Limited admin access for day-to-day operations, equipment issue/return" },
+            { role: "Officers/Adult Staff", access: "Full administrative access, reporting, system configuration" }
+        ],
+        multiTenantDetails: {
+            headline: "Isolated Inventory Systems",
+            structure: [
+                "Unit: Oakville Sea Cadets (Pilot) -> Equipment, Users, Audit Logs",
+                "Unit: Oakville Army Cadets (Expansion) -> Isolated Equipment & Data",
+                "Global -> Shared Platform Infrastructure"
+            ]
+        }
     },
 ];
