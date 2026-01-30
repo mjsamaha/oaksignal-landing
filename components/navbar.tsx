@@ -12,6 +12,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navigation = [
     { name: "About", href: "#about" },
@@ -77,8 +78,8 @@ export default function Navbar() {
                         </Link>
                     ))}
                 </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    {/* Placeholder for future login or extra CTA if needed */}
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
+                    <ThemeToggle />
                 </div>
             </nav>
 
@@ -138,6 +139,9 @@ export default function Navbar() {
                                         </motion.div>
                                     ))}
                                 </motion.div>
+                                <div className="py-6">
+                                    <ThemeToggle />
+                                </div>
                             </div>
                         </div>
                     </motion.div>

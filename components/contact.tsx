@@ -1,6 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
+import { ArrowRight, Mail } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -40,20 +50,38 @@ export default function Contact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="mt-6 flex flex-col items-center justify-center"
+                        className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSc9KAYVtMqa5xmmCslSYZkBiZMAOv4Y1Q2AQBpbuVwWbDAQBg/viewform?embedded=true"
-                            className="w-full h-[800px] rounded-lg shadow-lg"
-                            title="OakSignal Unit Interest Form"
-                        />
+                        {/* Dialog with Form */}
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <Button size="lg" className="group">
+                                    Get Started
+                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                </Button>
+                            </DialogTrigger>
+                            <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+                                <DialogHeader>
+                                    <DialogTitle>Start Your Journey with OakSignal</DialogTitle>
+                                    <DialogDescription>
+                                        Fill out the form below and we'll get back to you within 24 hours.
+                                    </DialogDescription>
+                                </DialogHeader>
+                                <iframe
+                                    src="https://docs.google.com/forms/d/e/1FAIpQLSc9KAYVtMqa5xmmCslSYZkBiZMAOv4Y1Q2AQBpbuVwWbDAQBg/viewform?embedded=true"
+                                    className="w-full h-[700px] rounded-lg"
+                                    title="OakSignal Unit Interest Form"
+                                />
+                            </DialogContent>
+                        </Dialog>
 
-                        <a
-                            href="mailto:contact.oaksignal@gmail.com"
-                            className="mt-6 text-base text-zinc-600 dark:text-zinc-400 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                        >
-                            Or email us directly at contact.oaksignal@gmail.com
-                        </a>
+                        {/* Email fallback button */}
+                        <Button variant="outline" size="lg" asChild>
+                            <a href="mailto:contact.oaksignal@gmail.com">
+                                <Mail className="mr-2 h-4 w-4" />
+                                Email Us Directly
+                            </a>
+                        </Button>
                     </motion.div>
                 </div>
             </div>
