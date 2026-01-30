@@ -124,11 +124,7 @@ This project is automatically deployed to **GitHub Pages** using GitHub Actions.
 - **Accessibility**: Inclusive, usable systems for all.
 - **Reliability**: Systems that work consistently.
 - **Maintainability**: Sustainable, well-documented solutions.
-
-### Active Projects
-- **SignalsMaster**: Mobile-first quiz platform for signal flag training.
-- **Quartermaster**: Enterprise inventory management with role-based access.
-
+  
 ---
 
 ## 📄 License
