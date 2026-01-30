@@ -3,7 +3,8 @@ import { Github } from "lucide-react";
 
 const navigation = {
     main: [
-        { name: "About", href: "/#about" },
+        { name: "About", href: "/about" },
+        { name: "FAQ", href: "/faq" },
         { name: "Projects", href: "/#projects" },
         { name: "Contact", href: "/#contact" },
     ],
