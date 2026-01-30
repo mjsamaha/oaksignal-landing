@@ -57,8 +57,11 @@ export default function Footer() {
                         ))}
                     </div>
                     <div className="mt-8 md:order-1 md:mt-0">
-                        <p className="text-center text-xs leading-5 text-zinc-400">
+                        <p className="text-center text-xs leading-5 text-zinc-400 md:text-left">
                             &copy; {new Date().getFullYear()} OakSignal. All rights reserved.
+                        </p>
+                        <p className="mt-1 text-center text-[10px] leading-3 text-zinc-500 md:text-left max-w-sm">
+                            Not an official DND/CAF/CJCR system. Independently developed.
                         </p>
                     </div>
                 </div>
