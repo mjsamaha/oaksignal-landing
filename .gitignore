@@ -13,6 +13,9 @@
 #docs
 /docs
 
+# AI coding agent instructions (local customization)
+.github/copilot-instructions.md
+
 # testing
 /coverage
 
