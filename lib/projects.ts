@@ -112,9 +112,9 @@ export const projects: Project[] = [
         multiTenantDetails: {
             headline: "Isolated Digital Spaces",
             structure: [
-                "Unit: Oakville Sea Cadets (Pilot) -> Cadets, Officers, Modules, Data",
-                "Unit: Future Units -> Same structure, completely isolated data",
-                "Platform Level -> Shared infrastructure, expansion ready"
+                "Unit: Oakville Sea Cadets (Pilot) - Cadets, Officers, Modules, Data",
+                "Unit: Future Units - Same structure, completely isolated data",
+                "Platform Level: Shared infrastructure, expansion ready"
             ]
         }
     },
@@ -215,9 +215,8 @@ export const projects: Project[] = [
         multiTenantDetails: {
             headline: "Isolated Inventory Systems",
             structure: [
-                "Unit: Oakville Sea Cadets (Pilot) -> Equipment, Users, Audit Logs",
-                "Unit: Oakville Army Cadets (Expansion) -> Isolated Equipment & Data",
-                "Global -> Shared Platform Infrastructure"
+                "Unit: Oakville Sea Cadets (Pilot) - Equipment, Users, Audit Logs",
+                "Multi-Unit: Shared Platform Infrastructure"
             ]
         }
     },
@@ -330,9 +329,8 @@ export const projects: Project[] = [
         multiTenantDetails: {
             headline: "Isolated Unit Websites",
             structure: [
-                "Unit: Example Sea Cadets -> Website, CMS Access, Events, Leadership Data",
-                "Unit: Example Army Cadets -> Isolated Website & Content",
-                "Platform Level -> Shared Infrastructure, Centralized Updates, Security"
+                "Unit: Example Sea Cadets - Website, CMS Access, Events, Leadership Data",
+                "Platform Level: Shared Infrastructure, Centralized Updates, Security"
             ]
         }
     },
