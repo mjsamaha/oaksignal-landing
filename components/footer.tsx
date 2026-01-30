@@ -7,6 +7,10 @@ const navigation = {
         { name: "Projects", href: "/#projects" },
         { name: "Contact", href: "/#contact" },
     ],
+    legal: [
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms of Service", href: "/terms" },
+    ],
     social: [
         {
             name: "GitHub",
@@ -44,10 +48,12 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-8 border-t border-white/10 pt-8 sm:mt-12 md:flex md:items-center md:justify-between">
-                    <div className="flex justify-center md:order-2">
-                        <p className="text-center text-xs leading-5 text-zinc-400">
-                            Building reliable systems for cadet & youth organizations.
-                        </p>
+                    <div className="flex justify-center gap-x-6 md:order-2">
+                        {navigation.legal.map((item) => (
+                            <Link key={item.name} href={item.href} className="text-xs leading-5 text-zinc-400 hover:text-white transition-colors">
+                                {item.name}
+                            </Link>
+                        ))}
                     </div>
                     <div className="mt-8 md:order-1 md:mt-0">
                         <p className="text-center text-xs leading-5 text-zinc-400">
