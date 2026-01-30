@@ -25,7 +25,7 @@ export default function AboutPage() {
             <span className="text-amber-600 dark:text-amber-500">⚠</span> Important Disclaimer
           </h2>
           <p className="text-sm text-zinc-700 dark:text-zinc-300">
-            OakSignal is a privately developed software project and is <strong>not</strong> an official system of the Department of National Defence (DND), the Canadian Armed Forces (CAF), or the Cadets and Junior Canadian Rangers (CJCR). While our tools are designed to align with cadet program structures and policies, they are independent third-party solutions.
+            OakSignal is a privately developed software initiative and is <strong>not</strong> an official system of the Department of National Defence (DND), the Canadian Armed Forces (CAF), or the Cadets and Junior Canadian Rangers (CJCR). While our tools are designed to align with cadet program structures and policies, they are independent third-party solutions.
           </p>
         </section>
 

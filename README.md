@@ -135,9 +135,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📬 Contact
 
-**Matthew Samaha**
-- 📧 Email: matthewsamaha@gmail.com
-- 🐙 GitHub: [@mjsamaha](https://github.com/mjsamaha)
+**OakSignal Team**
+
+For inquiries about OakSignal projects, please visit the [OakSignal landing page](https://mjsamaha.github.io/oaksignal-landing/) or contact through the website.
 
 ---
 *Built with ❤️ for the Cadet Program.*

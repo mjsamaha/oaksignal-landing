@@ -90,7 +90,7 @@ export const projects: Project[] = [
             "Role-Based Access Control",
             "Offline PWA Support"
         ],
-        detailedOverview: "SignalsMaster is a specialized learning management system designed to modernize sea cadet training. Unlike generic LMS platforms, it is purpose-built for the maritime context, offering specific modules for Signal Flags, Seamanship, and Drill. The platform utilizes a multi-tenant architecture, ensuring that each cadet unit operates in a completely isolated environment—securely managing their own cadets, data, and progress tracking while benefiting from a shared, robust infrastructure. Starting with a pilot at Oakville Sea Cadets, it aims to scale to units nationwide.",
+        detailedOverview: "SignalsMaster is a specialized learning management system designed to modernize sea cadet training. Unlike generic LMS platforms, it is purpose-built for the maritime context, offering specific modules for Signal Flags, Seamanship, and Drill. The platform utilizes a multi-tenant architecture, ensuring that each cadet unit operates in a completely isolated environment—securely managing their own cadets, data, and progress tracking while benefiting from a shared, robust infrastructure. Starting with a pilot at an initial partner unit, it aims to scale to units nationwide.",
         technicalDetails: {
             frontend: "Next.js (React), TypeScript, ShadCN/UI, Tailwind CSS",
             backend: "Node.js/Express or Next.js API routes",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
             security: "Row-level security, email domain validation, encrypted traffic"
         },
         timeline: [
-            { phase: "Alpha Launch", date: "March 2026", details: "Pilot with Oakville Sea Cadets" },
+            { phase: "Alpha Launch", date: "March 2026", details: "Pilot deployment with an initial partner unit" },
             { phase: "Beta Launch", date: "April 2026", details: "Expanded testing and feature refinement" },
             { phase: "Expansion", date: "Q3 2026", details: "Rollout to future Sea Cadet units and potential Army/Air expansion" }
         ],
@@ -112,7 +112,7 @@ export const projects: Project[] = [
         multiTenantDetails: {
             headline: "Isolated Digital Spaces",
             structure: [
-                "Unit: Oakville Sea Cadets (Pilot) - Cadets, Officers, Modules, Data",
+                "Unit: Partner Unit Alpha (Pilot) - Cadets, Officers, Modules, Data",
                 "Unit: Future Units - Same structure, completely isolated data",
                 "Platform Level: Shared infrastructure, expansion ready"
             ]
@@ -175,7 +175,7 @@ export const projects: Project[] = [
                 phase: "Q1 2026: Planning & Analysis",
                 date: "Jan - Mar 2026",
                 details: [
-                    "Survey existing inventory practices at Oakville Sea Cadets",
+                    "Survey existing inventory practices at pilot unit",
                     "Analyze pain points with current manual systems",
                     "Evaluate technical approaches and architecture options",
                     "Select best solution strategy (build vs. adapt)"
@@ -204,7 +204,7 @@ export const projects: Project[] = [
             {
                 phase: "Active Development",
                 date: "Q4 2026+",
-                details: "Target beta deployment to Oakville Sea Cadets"
+                details: "Target beta deployment to pilot unit"
             }
         ],
         roles: [
@@ -215,7 +215,7 @@ export const projects: Project[] = [
         multiTenantDetails: {
             headline: "Isolated Inventory Systems",
             structure: [
-                "Unit: Oakville Sea Cadets (Pilot) - Equipment, Users, Audit Logs",
+                "Unit: Partner Unit Alpha (Pilot) - Equipment, Users, Audit Logs",
                 "Multi-Unit: Shared Platform Infrastructure"
             ]
         }
@@ -250,7 +250,7 @@ export const projects: Project[] = [
                 "Multi-Tenant Architecture: One platform serving many units, each with isolated digital space.",
                 "Branch-Themed Templates: Professional designs for Sea, Army, and Air Cadets.",
                 "Built-in CMS: Non-technical staff can publish news, manage events, and update content.",
-                "Subdomain Routing: Each unit gets their own branded subdomain (e.g., oakville-sea.oaksignal.ca).",
+                "Subdomain Routing: Each unit gets their own branded subdomain (e.g., unit-alpha.oaksignal.ca).",
                 "Leadership Board: Structured display of officers, staff, and senior cadets with ranks.",
                 "Integration Ready: Designed to complement SignalsMaster and Quartermaster systems."
             ]
